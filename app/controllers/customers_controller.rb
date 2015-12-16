@@ -23,7 +23,7 @@ class CustomersController < ApplicationController
 	def update
 		@customer=Customer.find(params[:id])
 		
-		if  @customer.update_values(customer_params,params[:cont],params[:newcont])
+		if  @customer.update_values(customer_params,params[:cont],params[:new_contact])
 			redirect_to customers_url
 			else
 			render action: 'edit'

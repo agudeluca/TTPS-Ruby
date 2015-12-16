@@ -9,9 +9,12 @@ class Customer < ActiveRecord::Base
 	has_many :invoices
 	def update_contacts(param,new_contact)
 	     contacts.destroy_all
+	     if !param.nil?
 	     param.values.each do |aux|
             contacts.new(aux)
 	     end
+	 end
+         contacts.new(type_contact: new_contact['type_contact'],contact_value: new_contact['contact_value'])
 	     save
 	end
  	def update_values(customer,contacts,new_contact)
