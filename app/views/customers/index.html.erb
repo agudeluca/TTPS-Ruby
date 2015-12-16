@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	
+			<h3>casiisasai</h3>
+			<table>
+		<% @cust.each do |customer| %>
+		<tr>
+			<td><%= customer.name %></td>
+			<td><%= customer.last_name %></td>
+			<td><%= customer.document_number %></td>
+			<td><%= customer.birthdate %></td>
+
+		</tr>
+		<% end %>
+	</table>
+
+</body>
+</html>
