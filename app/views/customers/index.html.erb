@@ -3,9 +3,9 @@
 <head>
 	<title>Index</title>
 </head>
+
 <body>
-	
-			<h3>casiisasai</h3>
+	    
 			<table>
 		<% @cust.each do |customer| %>
 		<tr>
@@ -13,10 +13,12 @@
 			<td><%= customer.last_name %></td>
 			<td><%= customer.document_number %></td>
 			<td><%= customer.birthdate %></td>
-
+                 <td><%= customer.name %></td>
+             <td><%= link_to 'Editar', edit_customer_path(customer) %></td>
 		</tr>
 		<% end %>
 	</table>
+	<%= link_to 'Registrar nuevo customer', new_customer_path %>
 
 </body>
 </html>

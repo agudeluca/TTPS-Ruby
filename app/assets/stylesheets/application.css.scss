@@ -1,0 +1,68 @@
+/* line 1, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
+body {
+  background: linear-gradient(to right, #6d0019 0%, #f53945 34%, #f53945 67%, #6d0019 100%);
+  margin: 0;
+}
+
+/* line 5, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
+.navbar {
+  position: fixed;
+  background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 39px;
+  box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.75);
+}
+
+/* line 14, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
+.comment-navbar {
+  position: fixed;
+  left: 46%;
+  font-size: x-large;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+/* line 22, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
+.main-container {
+  position: inherit;
+  width: 80%;
+  height: 641px;
+  margin-top: 81px;
+  margin-left: 10%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 0.31);
+  margin-bottom: 17px;
+}
+
+/* line 33, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
+.footer {
+  width: 100%;
+  box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.75);
+  background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
+  height: 39px;
+  margin-top: 35px;
+}
+
+/* line 40, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
+.img-footer {
+  width: 20px;
+  position: relative;
+  top: 6px;
+  margin-left: 4px;
+}
+
+/* line 46, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
+.footer-letra {
+  position: relative;
+  top: 0px;
+  margin-bottom: 0;
+  margin-left: 7px;
+  font-family: 'Ubuntu', sans-serif;
+  left: 43%;
+  font-size: inherit;
+  width: 187px;
+}

@@ -7,4 +7,14 @@ class Customer < ActiveRecord::Base
 	validates  :cuil_cuit, presence: true, format:{ with: /[\d{2}]+\-[\d{8}]+\-[\d{1}]/ },uniqueness:{}
 	has_many :contacts
 	has_many :invoices
+	def update_contacts(param,new_contact)
+	     contacts.destroy_all
+	     param.values.each do |aux|
+            contacts.new(aux)
+	     end
+	     save
+	end
+ 	def update_values(customer,contacts,new_contact)
+        update_attributes(customer) && update_contacts(contacts,new_contact)
+	end
 end
