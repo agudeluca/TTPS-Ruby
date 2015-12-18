@@ -5,7 +5,7 @@
 </head>
 
 <body>
-	    
+	    <%= link_to 'Registrar nuevo customer', new_customer_path %>
 			<table>
 		<% @cust.each do |customer| %>
 		<tr>
@@ -14,11 +14,14 @@
 			<td><%= customer.document_number %></td>
 			<td><%= customer.birthdate %></td>
                  <td><%= customer.name %></td>
+                 <td><%= link_to 'Eliminar', customer,method: :delete %> </td>
              <td><%= link_to 'Editar', edit_customer_path(customer) %></td>
+             <td><%= link_to 'Mostrar Usuario', customer_path(customer) %></td>
+             <td><%= link_to 'Ver Facturas', customer_invoices_path(customer.id) %></td>
 		</tr>
 		<% end %>
 	</table>
-	<%= link_to 'Registrar nuevo customer', new_customer_path %>
+	
 
 </body>
 </html>

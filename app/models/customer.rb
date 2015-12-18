@@ -7,17 +7,22 @@ class Customer < ActiveRecord::Base
 	validates  :cuil_cuit, presence: true, format:{ with: /[\d{2}]+\-[\d{8}]+\-[\d{1}]/ },uniqueness:{}
 	has_many :contacts
 	has_many :invoices
-	def update_contacts(param,new_contact)
-	     contacts.destroy_all
-	     if !param.nil?
-	     param.values.each do |aux|
-            contacts.new(aux)
-	     end
-	 end
-         contacts.new(type_contact: new_contact['type_contact'],contact_value: new_contact['contact_value'])
-	     save
-	end
+	accepts_nested_attributes_for :contacts
+	def update_contacts(param)
+	      contacts.destroy_all
+	      param.values.each do |t|
+		   contacts.new(t)
+		  end
+		 save
+		end	
+        
  	def update_values(customer,contacts,new_contact)
-        update_attributes(customer) && update_contacts(contacts,new_contact)
-	end
+        @new=Contact.new(type_contact: new_contact["type_contact"],contact_value:new_contact["contact_value"])
+    	if !@new.valid?
+    	(update_attributes(customer) &&  update_contacts(contacts))
+    	else
+    	(update_attributes(customer) && update_contacts(contacts) && self.contacts.create(type_contact: new_contact["type_contact"],contact_value:new_contact["contact_value"]))
+
+        end
+	    end
 end

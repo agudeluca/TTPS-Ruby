@@ -1,0 +1,22 @@
+<%= form_for @invoice, url:customer_invoice_path do |ins| %>
+<div class ="field">
+  <%= ins.label "Detalles" %><br>
+  <%=  ins.text_field :details,:required => true %>
+  </div>
+  <div class ="field">
+  <%= ins.label "Destinatario" %><br>
+  <%=  ins.text_field :reveiver,:required => true %>
+  </div>
+  <div class='field'>
+      <%= ins.label :fecha_de_Emision %><br>
+      <%= ins.date_field :date,:required => true %>
+    </div>
+  <div class ="field">
+   <%= ins.label "Monto" %><br>
+   <%= ins.number_field :amount, :step => 0.01,:required => true %>
+   </div>
+   <div class="actions">
+     <%= ins.submit 'Guardar'%>
+  </div>
+  <% end %>
+   <%= link_to 'Volver', customer_invoices_path %>

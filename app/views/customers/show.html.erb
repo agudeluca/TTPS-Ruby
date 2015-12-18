@@ -1,0 +1,9 @@
+
+			<div><%= @customer.name%> <%= @customer.last_name%> <%=@customer.document_number %></div>
+			<div><%= @customer.birthdate %> <%=@customer.name%></div>
+                 <div><%= link_to 'Eliminar', customer_path(@customer),method: :delete %> <%= link_to 'Editar', edit_customer_path(@customer)%></div>
+	<% @contact.each do |cont| %>
+	<div><%= cont.type_contact %></div>
+	<div><%= cont.contact_value %></div>
+		<% end %> 
+		<%= link_to 'Volver', customers_path %>

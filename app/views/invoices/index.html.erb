@@ -1,0 +1,17 @@
+<%= link_to 'Registrar nuevo customer', new_customer_invoice_path %>
+<table>
+<% @invoice.each do |ins| %>
+
+		
+		<tr>
+			<td><%= ins.details %></td>
+			<td><%= ins.amount %></td>
+			<td><%= ins.date %></td>
+			<td><%= ins.reveiver %></td>
+			<td><%= link_to 'Editar', edit_customer_invoice_path(@customer,ins) %></td>
+			<td><%= link_to 'Eliminar', customer_invoice_path(@customer,ins),method: :delete %> </td>
+
+			</tr>
+	 </table>
+	 <% end %>
+	 <%= link_to 'Volver', customers_path %>

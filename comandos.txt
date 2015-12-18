@@ -3,7 +3,7 @@ birthdate:Date.today,cuil_cuit:'23-36512477-9',document_number:36058018)
 
 a.contacts.new(type_contact:'email',contact_value:'adsadas@sadsa')
 
-a=Invoice.new(details:"compra de casa",amount:0.3,date:Date.today,reveiver:"12324523451")
+a.invoices.new(details:"compra de casa",amount:0.3,date:Date.today,reveiver:"12324523451")
 
 bundle exec rails console 
 
