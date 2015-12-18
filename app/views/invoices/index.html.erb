@@ -1,4 +1,4 @@
-<%= link_to 'Registrar nuevo customer', new_customer_invoice_path %>
+<%= link_to 'Registrar nueva factura', new_customer_invoice_path %>
 <table>
 <% @invoice.each do |ins| %>
 
@@ -12,6 +12,7 @@
 			<td><%= link_to 'Eliminar', customer_invoice_path(@customer,ins),method: :delete %> </td>
 
 			</tr>
+			 <% end %>
 	 </table>
-	 <% end %>
+	
 	 <%= link_to 'Volver', customers_path %>

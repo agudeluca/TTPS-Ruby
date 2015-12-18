@@ -6,4 +6,18 @@
 	<div><%= cont.type_contact %></div>
 	<div><%= cont.contact_value %></div>
 		<% end %> 
+	<h3> La edad de <%= @customer.name %> es <%= @edad %></h3>
+	<h3>El monto total facturado por año</h3>
+	<% @montoPorAño.each do |año| %>
+	<div>En <%=año[0]%> facturó:  $<%= año[1] %> </div>
+	<% end %>
+	<h3>La cantidad de facturas que el cliente facturo en el corriente año</h3>
+	 <% @montoPorMes.each do |mes| %>
+       <div>En <%=mes[0]%> facturó:  $<%= mes[1] %> </div>
+	 <end>
+	 <% end %>
+	 <h3>Las 5 personas a las que más les ha facturado ese cliente.</h3>
+	 <%  @top5personas.each do |persona| %>
+	 <div>La <%=persona[0]%>   <%= persona[1] %> </div>
+	 <% end %>
 		<%= link_to 'Volver', customers_path %>

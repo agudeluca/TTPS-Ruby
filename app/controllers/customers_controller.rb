@@ -37,6 +37,10 @@ class CustomersController < ApplicationController
 	def show
 		@customer=Customer.find(params[:id])
 		@contact=@customer.contacts.all
+		@edad=@customer.calcular_edad
+		@montoPorAño=@customer.monto_total_por_año
+		@montoPorMes=@customer.monto_total_por_mes
+		@top5personas=@customer.top_personas_5
     end
     private
 	def customer_params
