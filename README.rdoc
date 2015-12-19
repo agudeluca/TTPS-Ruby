@@ -1,28 +1,19 @@
 == README
+todos estos comandos ejercutarlos dentro del directorio TTPS-Ruby/
+IMPORTANTE
+ ejecutar bundle install  
+ ejecutar bundle update  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+comando para poblar la bd a traves de seeds. 
+bundle exec rails c 
+rake db:seed
 
-Things you may want to cover:
+este comando es para ejecutar los tests:
+ponemos:
+bundle exec rails c 
+y luego 
+bundle exec rake test test/models/customer_test.rb
 
-* Ruby version
+ejecutar server
+bundle exec rails s
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
