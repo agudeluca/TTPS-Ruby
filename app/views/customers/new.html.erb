@@ -27,7 +27,7 @@
   <%=  cust.text_field :cuil_cuit,:required => true,:placeholder => "NN-NNNNNNNN-N" ,:class => 'imputs'%>
   </div>
 		  <%= fields_for(:contacts) do |contac| %>
-		  
+		     
            <div class='field'>
         <%= contac.label :tipo_de_contacto,:class => "label-imputs"  %><br>
         <%= contac.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  

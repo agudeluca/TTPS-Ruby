@@ -30,7 +30,10 @@
 
   <% @contacts.each do |cont| %>
 		  <%= fields_for "cont[]",cont do |contac| %>
-            <div class='field'>
+            <br>
+         
+
+<div class='field'>
         <%= contac.label :tipo_de_contacto ,:class => "label-imputs"%><br>
         <%= contac.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  
         </div>
@@ -43,7 +46,7 @@
    <% end %>
    <h3 class="label-grande"> Nuevo Contacto (Opcional): </h3>
    <%= fields_for :new_contact do |n| %>
-           <div class='field'>
+                    <div class='field'>
         <%= n.label :tipo_de_contacto,:class => "label-imputs" %><br>
         <%= n.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  
         </div>

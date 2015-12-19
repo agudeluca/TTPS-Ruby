@@ -10,6 +10,7 @@
 
 
 
+
 body {
   background: linear-gradient(to right, #6d0019 0%, #f53945 34%, #f53945 67%, #6d0019 100%);
   margin: 0;
@@ -128,7 +129,7 @@ body {
 }
 /* line 5, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
 .navbar {
-  position: fixed;
+  position: absolute;
   background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
   width: 100%;
   top: 0;
@@ -184,7 +185,7 @@ th, td {
 
 /* line 14, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
 .comment-navbar {
-  position: fixed;
+  position: absolute;
   left: 46%;
   font-size: x-large;
   margin-top: 5px;
