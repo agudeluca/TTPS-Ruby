@@ -5,22 +5,28 @@
 </head>
 
 <body>
-	    <%= link_to 'Registrar nuevo customer', new_customer_path %>
-			<table>
+	    
+	    <h3 class="label-grande">Listado de Usuarios del sistema:</h3>
+	    <%= link_to 'Registrar nuevo customer', new_customer_path,:class =>  'insertarbutton' %>
+			<div class="background"><table class="table">
 		<% @cust.each do |customer| %>
-		<tr>
+		<tr class="container-data">
 			<td><%= customer.name %></td>
 			<td><%= customer.last_name %></td>
 			<td><%= customer.document_number %></td>
 			<td><%= customer.birthdate %></td>
-                 <td><%= customer.name %></td>
-                 <td><%= link_to 'Eliminar', customer,method: :delete %> </td>
-             <td><%= link_to 'Editar', edit_customer_path(customer) %></td>
-             <td><%= link_to 'Mostrar Datos y Estadisticas', customer_path(customer) %></td>
-             <td><%= link_to 'Ver Facturas', customer_invoices_path(customer.id) %></td>
+            <td><%= customer.name %></td>
+            <td class="custom-cell">
+                 <div><%= link_to 'Eliminar', customer,method: :delete %></div>  
+                 <div><%= link_to 'Editar', edit_customer_path(customer) %></div>    
+                 <div><%= link_to 'Mostrar Datos y Estadisticas', customer_path(customer) %></div>   
+                 <div><%= link_to 'Ver Facturas', customer_invoices_path(customer.id) %></div>
+            </td>
+             
 		</tr>
 		<% end %>
 	</table>
+   </div>
 	
 
 </body>

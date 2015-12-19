@@ -1,18 +1,22 @@
-<%= link_to 'Registrar nueva factura', new_customer_invoice_path %>
-<table>
+<h3 class="label-grande"> Facturas del Usuario: </h3>
+<%= link_to 'Registrar nueva factura' , new_customer_invoice_path,:class =>  'insertarbutton' %>
+
+<div class="background-div"><table  class="table">
 <% @invoice.each do |ins| %>
 
 		
-		<tr>
+		<tr class="container-data">
 			<td><%= ins.details %></td>
 			<td><%= ins.amount %></td>
 			<td><%= ins.date %></td>
 			<td><%= ins.reveiver %></td>
-			<td><%= link_to 'Editar', edit_customer_invoice_path(@customer,ins) %></td>
-			<td><%= link_to 'Eliminar', customer_invoice_path(@customer,ins),method: :delete %> </td>
+			<td class="custom-cell">
+			<div><%= link_to 'Editar', edit_customer_invoice_path(@customer,ins) %></div>
+			<div><%= link_to 'Eliminar', customer_invoice_path(@customer,ins),method: :delete %></div>
+			 </td>
 
 			</tr>
 			 <% end %>
 	 </table>
-	
-	 <%= link_to 'Volver', customers_path %>
+	</div>
+	 <%= link_to 'Volver', customers_path,:class => "volver-class4" %>

@@ -1,11 +1,11 @@
 <%= form_for @invoice, url:customer_invoices_path do |ins| %>
 <div class ="field">
   <%= ins.label "Detalles" %><br>
-  <%=  ins.text_field :details,:required => true %>
+  <%=  ins.text_field :details,:required => true,:placeholder => "agrege detalles de la factura" %>
   </div>
   <div class ="field">
   <%= ins.label "Destinatario" %><br>
-  <%=  ins.text_field :reveiver,:required => true %>
+  <%=  ins.text_field :reveiver,:required => true,:placeholder => "a quien va destinado" %>
   </div>
   <div class='field'>
       <%= ins.label :fecha_de_Emision %><br>
@@ -13,7 +13,7 @@
     </div>
   <div class ="field">
    <%= ins.label "Monto" %><br>
-   <%= ins.number_field :amount, :step => 0.01,:required => true %>
+   <%= ins.number_field :amount, :step => 0.01,:required => true,:placeholder => "ingrese monto" %>
    </div>
    <div class="actions">
      <%= ins.submit 'Guardar'%>

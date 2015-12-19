@@ -1,7 +1,52 @@
 /* line 1, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
+
+
+
+
+
+
+
+
+
 body {
   background: linear-gradient(to right, #6d0019 0%, #f53945 34%, #f53945 67%, #6d0019 100%);
   margin: 0;
+}
+.field{
+
+}
+.submit-class{
+      position: relative;
+      background: linear-gradient(to bottom, #FFF4F4 0%, #6E943B 100%);
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-radius: 4px;
+      border-color: #3D3E3E;
+      border-style: solid;
+      border-width: 2px;
+      box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.75);
+      margin: 14px;
+}
+}
+.labet-imputs{
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+}
+.imputs{
+  width: 34%;
+  border-radius: 3px;
+  height: 21px;
+  border-color: #6F1C1C;
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: -1px 0px 13px -1px rgba(0,0,0,0.75);
+  margin: 3px;
+}
+.form-new{
+  position: relative;
+  left: 5%;
 }
 .table{
      top: 23px;
@@ -12,6 +57,52 @@ body {
     border-spacing: 0px 19px;
 }
 .container-full{
+  
+}
+.volver-class4{
+  position: relative;
+  background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  border-color: #3D3E3E;
+  border-style: solid;
+  top: 50px;
+  border-width: 2px;
+  left: 45%;
+  box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.75);
+}
+.volver-class2{
+  position: relative;
+  background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  border-color: #3D3E3E;
+  border-style: solid;
+  top: 50px;
+  border-width: 2px;
+  left: 45%;
+  box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.75);
+}
+.volver-class{
+  position: relative;
+  background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  border-color: #3D3E3E;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.75);
+}
+.background-div{
   
 }
 /* line 5, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
@@ -38,11 +129,11 @@ th, td {
 }
 .label-grande{
       font-size: large;
-    font-family: 'Ubuntu', sans-serif;
-    position: relative;
-    left: 7%;
-    top: 20px;
-    margin-bottom: 57px;
+      font-family: 'Ubuntu', sans-serif;
+      position: relative;
+      left: 7%;
+      top: 43px;
+      margin-bottom: 57px;
     }
 .container-data{
        top: 20px;
@@ -54,18 +145,20 @@ th, td {
 
 .insertarbutton{
             background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    border-color: #940505;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: smaller;
-    position: relative;
-    margin: 87px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 5px;
+            border-color: #940505;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: xx-large;
+            position: relative;
+            margin: 87px;
+            top: -35px;
+            left: 46%;
 }
 
 /* line 14, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */

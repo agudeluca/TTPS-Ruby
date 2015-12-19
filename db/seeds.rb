@@ -19,6 +19,7 @@ invoices_list=[
        ["pago de casa",4352,"2014/07/12","kacho castana"],
 
 ]
+Customer.destroy_all
 customer_list.each do |name,last_name,birthdate,genre,document_number,cuidcuil|
   a=Customer.new( name: name,last_name: last_name, birthdate: birthdate,genre: genre,document_number: document_number,cuil_cuit:cuidcuil )
   contacts_list.each do |type,val| 
