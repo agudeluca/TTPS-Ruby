@@ -4,9 +4,9 @@ class Customer < ActiveRecord::Base
 	validates :birthdate, presence: true
 	validates  :genre, presence: true, inclusion: { in: %w(Male Female),message: "%{value} is not a valid genre" } 
 	validates  :document_number, presence: true, length: { is: 8 }, numericality: { only_integer: true },uniqueness:{}
-	validates  :cuil_cuit, presence: true, format:{ with: /[\d{2}]+\-[\d{8}]+\-[\d{1}]/ },uniqueness:{}
-	has_many :contacts
-	has_many :invoices
+	validates  :cuil_cuit, presence: true,format:{ with: /[\d{2}]+\-[\d{8}]+\-[\d{1}]/ },uniqueness:{}
+	has_many :contacts,dependent: :destroy
+	has_many :invoices,dependent: :destroy
 	accepts_nested_attributes_for :contacts
 	def update_contacts(param)
 	      contacts.destroy_all

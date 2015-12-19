@@ -30,10 +30,10 @@
 
   <% @contacts.each do |cont| %>
 		  <%= fields_for "cont[]",cont do |contac| %>
-		      <div class ="field">
-		       <%= contac.label "Agregar tipo de contacto" %><br>
-		       <%=  contac.text_field :type_contact,:required => true %>
-		       </div>
+            <div class='field'>
+        <%= contac.label :tipo_de_contacto %><br>
+        <%= contac.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  
+        </div>
 		       <div class ="field">
 		       <%= contac.label "Agregar contacto" %><br>
 		       <%=  contac.text_field :contact_value,:required => true %>
@@ -43,10 +43,10 @@
    <% end %>
    <h3> Nuevo contacto (opcional) </h3>
    <%= fields_for :new_contact do |n| %>
-          <div class='field'>
-          <%= n.label "Agregar tipo de contacto" %><br>
-          <%= n.text_field :type_contact %>
-          </div>
+           <div class='field'>
+        <%= n.label :tipo_de_contacto %><br>
+        <%= n.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  
+        </div>
           <div class='field'>
           <%= n.label "Agregar contacto" %><br>
           <%= n.text_field :contact_value %>

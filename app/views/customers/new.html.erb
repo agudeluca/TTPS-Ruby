@@ -27,11 +27,11 @@
   <%=  cust.text_field :cuil_cuit,:required => true,:placeholder => "NN-NNNNNNNN-N" %>
   </div>
 		  <%= fields_for(:contacts) do |contac| %>
-		      <div class ="field">
-		       <%= contac.label "Agregar tipo de contacto" %><br>
-		       <%=  contac.text_field :type_contact,:required => true %>
-		       
-		       </div>
+		  
+           <div class='field'>
+        <%= contac.label :tipo_de_contacto %><br>
+        <%= contac.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  
+        </div>
 		       <div class ="field">
 		       <%= contac.label "Agregar contacto" %><br>
 		       <%=  contac.text_field :contact_value,:required => true %>
