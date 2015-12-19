@@ -2,6 +2,7 @@
 todos estos comandos ejercutarlos dentro del directorio TTPS-Ruby/
 IMPORTANTE
  ejecutar bundle install  
+ ejecutar bundle update  
 
 comando para poblar la bd a traves de seeds. 
 bundle exec rails c 
