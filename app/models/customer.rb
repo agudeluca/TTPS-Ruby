@@ -42,14 +42,14 @@ class Customer < ActiveRecord::Base
     	@ar=[["Enero", 0],[ "Febrero", 0],[ "Marzo", 0],["Abril", 0],["Mayo", 0],["Junio", 0],["Julio", 0],["Agosto", 0],["Septiembre", 0],["Octubre", 0],[ "Noviembre", 0],["Diciembre",0]]
     	@facturas=self.invoices.select { |num|  num.date.year == Date.today.year}
         @facturas.each do |fac|
-           @ar[fac.date.month-1][1]+=fac.amount
+           @ar[fac.date.month-1][1]+=1
         end
         return @ar
     end
     def top_personas_5
     	@hashdepersonas=Hash.new(0)
        self.invoices.each do |fac|
-         @hashdepersonas[fac.reveiver]+=1
+         @hashdepersonas[fac.reveiver]+=fac.amount
        end
        return @hashdepersonas.sort_by {|k,v| v}.reverse.first(5)
     end

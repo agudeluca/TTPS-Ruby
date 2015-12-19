@@ -1,5 +1,5 @@
 <h3 class="label-grande"> Datos y Estadisticas: </h3>
-			<div><%= @customer.name%> <%= @customer.last_name%> <%=@customer.document_number %></div>
+			<div class="container-statics"><div><%= @customer.name%> <%= @customer.last_name%> <%=@customer.document_number %></div>
 			<div><%= @customer.birthdate %> <%=@customer.name%></div>
                  <!--<div><%= link_to 'Eliminar', customer_path(@customer),method: :delete %> <%= link_to 'Editar', edit_customer_path(@customer)%></div>-->
 	<% @contact.each do |cont| %>
@@ -13,11 +13,12 @@
 	<% end %>
 	<h3>La cantidad de facturas que el cliente facturo en el corriente año</h3>
 	 <% @montoPorMes.each do |mes| %>
-       <div>En <%=mes[0]%> facturó:  $<%= mes[1] %> </div>
+       <div>En <%=mes[0]%> facturó:  <%= mes[1] %> Facturas. </div>
 	 <end>
 	 <% end %>
 	 <h3>Las 5 personas a las que más les ha facturado ese cliente.</h3>
 	 <%  @top5personas.each do |persona| %>
-	 <div>La <%=persona[0]%>   <%= persona[1] %> </div>
-	 <% end %>
+	 <div>  <%=persona[0]%>    ---       $<%= persona[1] %> </div>
+	 <% end %> 
+	 </div>
 		<%= link_to 'Volver', customers_path ,:class => 'volver-class5'%>

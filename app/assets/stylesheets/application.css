@@ -9,6 +9,7 @@
 
 
 
+
 body {
   background: linear-gradient(to right, #6d0019 0%, #f53945 34%, #f53945 67%, #6d0019 100%);
   margin: 0;
@@ -74,6 +75,10 @@ body {
   border-width: 2px;
   left: 45%;
   box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.75);
+}
+.container-statics{
+  left: 7%;
+  position: relative;
 }
 .volver-class2{
   position: relative;
