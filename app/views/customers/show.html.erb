@@ -1,10 +1,14 @@
 <h3 class="label-grande"> Datos y Estadisticas: </h3>
-			<div class="container-statics"><div><%= @customer.name%> <%= @customer.last_name%> <%=@customer.document_number %></div>
-			<div><%= @customer.birthdate %> <%=@customer.name%></div>
+			<div class="container-statics"><div> Nombre y Apellido: <%= @customer.name%> <%=@customer.last_name%></div>
+			
+			<div>DNI: <%=@customer.document_number %></div>
+			<div>Fecha de Nacimiento: <%= @customer.birthdate %> </div>
+			<div>cuil/cuit: <%=@customer.cuil_cuit%></div><br>
                  <!--<div><%= link_to 'Eliminar', customer_path(@customer),method: :delete %> <%= link_to 'Editar', edit_customer_path(@customer)%></div>-->
 	<% @contact.each do |cont| %>
-	<div><%= cont.type_contact %></div>
-	<div><%= cont.contact_value %></div>
+	<div>Tipo de contacto:     <%= cont.type_contact %></div>
+	<div>Contacto:     <%= cont.contact_value %></div>
+	<br>
 		<% end %> 
 	<h3> La edad de <%= @customer.name %> es <%= @edad %></h3>
 	<h3>El monto total facturado por año</h3>
