@@ -11,11 +11,10 @@
 			<div class="background"><table class="table">
 		<% @cust.each do |customer| %>
 		<tr class="container-data">
-			<td><%= customer.name %></td>
-			<td><%= customer.last_name %></td>
-			<td><%= customer.document_number %></td>
-			<td><%= customer.birthdate %></td>
-            <td><%= customer.name %></td>
+			<td>Nombre: <%= customer.name %> <%= customer.last_name %></td>
+			<td>DNI: <%=customer.document_number %></td>
+			<td>cuil/cuit: <%= customer.cuil_cuit %></td>
+			<td>Nacimiento: <%= customer.birthdate %></td>
             <td class="custom-cell">
                  <div><%= link_to 'Eliminar', customer,method: :delete %></div>  
                  <div><%= link_to 'Editar', edit_customer_path(customer) %></div>    
