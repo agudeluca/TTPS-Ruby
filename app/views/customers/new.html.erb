@@ -8,21 +8,23 @@
   <%= cust.label "Apellido" %><br>
   <%=  cust.text_field :last_name,:required => true %>
   </div>
+  <div class='field'>
+      <%= cust.label :fecha_de_nacimiento %><br>
+      <%= cust.date_field :birthdate,:required => true %>
+    </div>
   <div class ="field">
-  <%= cust.label "Fecha de nacimiento" %><br>
-  <%=  cust.text_field :birthdate,:required => true %>
-  </div>
-  <div class ="field">
-  <%= cust.label "Sexo" %><br>
-  <%=  cust.text_field :genre,:required => true %>
-  </div>
+   <%= cust.radio_button(:genre, "Male") %>
+   <%= cust.label(:genre, "Hombre") %>
+   <%= cust.radio_button(:genre, "Female") %>
+   <%= cust.label(:genre, "Mujer") %>
+   </div>
   <div class ="field">
   <%= cust.label "DNI" %><br>
-  <%=  cust.text_field :document_number,:required => true %>
+  <%=  cust.text_field :document_number,:required => true,:placeholder => "ingrese un dni de 8 digitos" %>
   </div>
   <div class ="field">
-  <%= cust.label "CUID/CUIL" %><br>
-  <%=  cust.text_field :cuil_cuit,:required => true %>
+  <%= cust.label "CUID/CUIL "%><br>
+  <%=  cust.text_field :cuil_cuit,:required => true,:placeholder => "NN-NNNNNNNN-N" %>
   </div>
 		  <%= fields_for(:contacts) do |contac| %>
 		      <div class ="field">

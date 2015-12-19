@@ -49,4 +49,7 @@ class CustomersController < ApplicationController
 	def new_contact_params
 		params.require(:new_contact).permit(:type_contact, :contact_value)
 	end
+	def contact_params
+	    params.require(:contacts).permit(:type_contact, :contact_value)
+	end
 end
