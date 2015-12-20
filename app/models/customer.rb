@@ -4,7 +4,7 @@ class Customer < ActiveRecord::Base
 	validates :birthdate, presence: true,allow_blank: false
 	validates  :genre, presence: true, inclusion: { in: %w(Male Female),message: "%{value} is not a valid genre" } ,allow_blank: false
 	validates  :document_number, presence: true, length: { is: 8 }, numericality: { only_integer: true },uniqueness:{},allow_blank: false
-	validates  :cuil_cuit, presence: true,format:{ with: /[\d{2}]+\-[\d{8}]+\-[\d{1}]/,
+	validates  :cuil_cuit, presence: true,format:{ with: /\A\d{2}\-\d{8}\-\d{1}\z/,
                         message: "el cuil no respeta el formato" },length: {is: 13},uniqueness:{},allow_blank: false
 	has_many :contacts,dependent: :destroy
 	validates :contacts, presence: true
@@ -34,7 +34,7 @@ class Customer < ActiveRecord::Base
     	(update_attributes(customer) &&  update_contacts(contacts))
     	 
     	else
-    	(update_attributes(customer) && update_contacts(contacts) && self.contacts.create(type_contact: new_contact["type_contact"],contact_value:new_contact["contact_value"]))
+    	(update_attributes(customer) && update_contacts(contacts) && self.contacts.new(type_contact: new_contact["type_contact"],contact_value:new_contact["contact_value"]).save)
         
         end
 	    end
