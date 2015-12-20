@@ -1,10 +1,11 @@
 class Customer < ActiveRecord::Base
-	validates :name, presence: true, format:{with: /\A[a-zA-Z ]+\z/,message: "ingrese solamente letras"}, length: {maximum:50}
-	validates :last_name, presence: true, format:{with: /\A[a-zA-Z ]+\z/,message: "ingrese solamente letras"}, length: {maximum:50}
-	validates :birthdate, presence: true
-	validates  :genre, presence: true, inclusion: { in: %w(Male Female),message: "%{value} is not a valid genre" } 
-	validates  :document_number, presence: true, length: { is: 8 }, numericality: { only_integer: true },uniqueness:{}
-	validates  :cuil_cuit, presence: true,format:{ with: /[\d{2}]+\-[\d{8}]+\-[\d{1}]/ },length: {is: 13},uniqueness:{}
+	validates :name, presence: true, format:{with: /\A[a-zA-Z ]+\z/,message: "ingrese solamente letras"}, length: {maximum:50},allow_blank: false
+	validates :last_name, presence: true, format:{with: /\A[a-zA-Z ]+\z/,message: "ingrese solamente letras"}, length: {maximum:50},allow_blank: false
+	validates :birthdate, presence: true,allow_blank: false
+	validates  :genre, presence: true, inclusion: { in: %w(Male Female),message: "%{value} is not a valid genre" } ,allow_blank: false
+	validates  :document_number, presence: true, length: { is: 8 }, numericality: { only_integer: true },uniqueness:{},allow_blank: false
+	validates  :cuil_cuit, presence: true,format:{ with: /[\d{2}]+\-[\d{8}]+\-[\d{1}]/,
+                        message: "el cuil no respeta el formato" },length: {is: 13},uniqueness:{},allow_blank: false
 	has_many :contacts,dependent: :destroy
 	validates :contacts, presence: true
 	validates_associated :contacts
