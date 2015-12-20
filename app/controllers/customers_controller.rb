@@ -27,7 +27,7 @@ class CustomersController < ApplicationController
 		if  @customer.update_values(customer_params,params[:cont],params[:new_contact])
 			redirect_to customers_url
 			else
-			render action: 'edit'
+			redirect_to edit_customer_path(@customer)
 		end
 	end
 	def destroy 

@@ -20,11 +20,11 @@
    </div>
   <div class ="field">
   <%= cust.label "DNI",:class => "label-imputs" %><br>
-  <%=  cust.text_field :document_number,:required => true,:class => 'imputs' %>
+  <%=  cust.text_field :document_number,:required => true,:class => 'imputs',:placeholder => "ingrese un dni de 8 digitos" %>
   </div>
   <div class ="field">
   <%= cust.label "CUIT/CUIL" ,:class => "label-imputs"%><br>
-  <%=  cust.text_field :cuil_cuit,:required => true,:class => 'imputs' %>
+  <%=  cust.text_field :cuil_cuit,:required => true,:class => 'imputs',:placeholder => "formato NN-NNNNNNNN-N" %>
   </div>
   <% if !@contacts.nil? %> 
 
