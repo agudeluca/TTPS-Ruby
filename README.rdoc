@@ -13,15 +13,14 @@ IMPORTANTE
  
  
 comando para poblar la bd a traves de seeds. 
-bundle exec rails c 
 rake db:seed
 
 este comando es para ejecutar los tests:
-ponemos:
-bundle exec rails c 
-y luego 
 bundle exec rake test test/models/customer_test.rb
 
 ejecutar server
 bundle exec rails s
+
+ejecutar consola
+bundle exec rails c
 
