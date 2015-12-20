@@ -24,7 +24,7 @@
   </div>
   <div class ="field">
   <%= cust.label "CUID/CUIL  ",:class => "label-imputs"%><br>
-  <%=  cust.text_field :cuil_cuit,:required => true,:placeholder => "NN-NNNNNNNN-N" ,:class => 'imputs'%>
+  <%=  cust.text_field :cuil_cuit,:required => true,:placeholder => "NN-NNNNNNNN-N",pattern:/[\d{2}]+\-[\d{8}]+\-[\d{1}]/ ,:class => 'imputs'%>
   </div>
 		  <%= fields_for(:contacts) do |contac| %>
 		     
