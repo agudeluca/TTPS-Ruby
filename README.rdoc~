@@ -17,6 +17,7 @@ rake db:seed
 
 este comando es para ejecutar los tests:
 bundle exec rake test test/models/customer_test.rb
+bundle exec rake test test/models/invoice_test.rb
 
 ejecutar server
 bundle exec rails s

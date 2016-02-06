@@ -3,7 +3,7 @@ todos estos comandos ejercutarlos dentro del directorio TTPS-Ruby/
 IMPORTANTE
  ejecutar bundle install 
  ejecutar bundler exec rake db:migrate
- ejecutar rake db:seed
+ ejecutar bundle exec rake db:seed
  ejecutar bundle exec rails s
  si te aparece error "Could not find a JavaScript runtime"
  (yo en mi pc lo solucione instalando la libreria de js no pude instalar 
