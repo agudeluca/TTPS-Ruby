@@ -1,11 +1,19 @@
+<div class="form-new"><h3 class="label-grande"> Nuevo Usuario: </h3>
 <%= form_for @invoice, url:customer_invoices_path do |ins| %>
 <div class ="field">
   <%= ins.label "Detalles" %><br>
-  <%=  ins.text_field :details,:required => true,:placeholder => "agrege detalles de la factura" %>
+  <%=  ins.text_field :details,:required => true,:placeholder => "agrege detalles de la factura",:class => 'imputs' %>
   </div>
   <div class ="field">
   <%= ins.label "Destinatario" %><br>
-  <%=  ins.text_field :reveiver,:required => true,:placeholder => "a quien va destinado" %>
+  <%=  ins.text_field :reveiver,:required => true,:placeholder => "a quien va destinado",:class => 'imputs' %>
+  </div>
+   <div class ="field">
+  <%= ins.label "CUID/CUIL  ",:class => "label-imputs"%><br>
+  <%=  ins.text_field :cuil_cuit_reveiver,:required => true,
+  :placeholder => "NN-NNNNNNNN-N",
+  pattern:/[\d{2}]+\-[\d{8}]+\-[\d{1}]/ ,
+  :class => 'imputs' %>
   </div>
   <div class='field'>
       <%= ins.label :fecha_de_Emision %><br>
@@ -13,10 +21,13 @@
     </div>
   <div class ="field">
    <%= ins.label "Monto" %><br>
-   <%= ins.number_field :amount, :step => 0.01,:required => true,:placeholder => "ingrese monto" %>
+   <%= ins.number_field :amount, :step => 0.01,:required => true,:placeholder => "ingrese monto",:class => 'imputs' %>
    </div>
    <div class="actions">
-     <%= ins.submit 'Guardar'%>
+     <%= ins.submit 'Guardar',:class => 'submit-class'%>
+       <%= link_to 'Volver', customer_invoices_path,:class => 'volver-class' %>
   </div>
+
   <% end %>
-   <%= link_to 'Volver', customer_invoices_path %>
+   </div>
+ 

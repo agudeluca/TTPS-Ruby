@@ -5,7 +5,7 @@ class CreateInvoices < ActiveRecord::Migration
       t.float :amount
       t.date :date
       t.string :reveiver
-      t.string :cuil_cuit_reveiver
+      t.string :cuil_cuit
       t.belongs_to :customer, index: true
       t.timestamps null: false
     end

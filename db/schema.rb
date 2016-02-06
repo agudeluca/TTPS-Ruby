@@ -39,9 +39,10 @@ ActiveRecord::Schema.define(version: 20151215222900) do
     t.float    "amount"
     t.date     "date"
     t.string   "reveiver"
+    t.string   "cuil_cuit_reveiver"
     t.integer  "customer_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
   add_index "invoices", ["customer_id"], name: "index_invoices_on_customer_id"

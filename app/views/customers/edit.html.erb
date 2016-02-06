@@ -24,7 +24,10 @@
   </div>
   <div class ="field">
   <%= cust.label "CUIT/CUIL" ,:class => "label-imputs"%><br>
-  <%=  cust.text_field :cuil_cuit,:required => true,:class => 'imputs',pattern:/[\d{2}]+\-[\d{8}]+\-[\d{1}]/,:placeholder => "formato NN-NNNNNNNN-N" %>
+  <%=  cust.text_field :cuil_cuit,:required => true,:class => 'imputs',
+  pattern:/[\d{2}]+\-[\d{8}]+\-[\d{1}]/,
+  :placeholder => "formato NN-NNNNNNNN-N"
+  %>
   </div>
   <% if !@contacts.nil? %> 
 
@@ -35,7 +38,9 @@
 
 <div class='field'>
         <%= contac.label :tipo_de_contacto ,:class => "label-imputs"%><br>
-        <%= contac.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  
+        <%= contac.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],
+        ['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> 
+        <br>  
         </div>
 		       <div class ="field">
 		       <%= contac.label "Agregar contacto",:class => "label-imputs" %><br>
@@ -48,7 +53,8 @@
    <%= fields_for :new_contact do |n| %>
                     <div class='field'>
         <%= n.label :tipo_de_contacto,:class => "label-imputs" %><br>
-        <%= n.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  
+        <%= n.select( :type_contact, [['Teléfono','phonenumber'],[ 'Email','email'],['Skype','skype'],[ 'Dirección','address'],
+        ['Twitter','twitter'],['Linkedin','linkedin']]) %> <br>  
         </div>
           <div class='field'>
           <%= n.label "Agregar contacto",:class => "label-imputs" %><br>

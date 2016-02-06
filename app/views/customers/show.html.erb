@@ -4,7 +4,9 @@
 			<div>DNI: <%=@customer.document_number %></div>
 			<div>Fecha de Nacimiento: <%= @customer.birthdate %> </div>
 			<div>cuil/cuit: <%=@customer.cuil_cuit%></div><br>
-                 <!--<div><%= link_to 'Eliminar', customer_path(@customer),method: :delete %> <%= link_to 'Editar', edit_customer_path(@customer)%></div>-->
+                 <!--<div><%= link_to 'Eliminar',
+                  customer_path(@customer),method: :delete %> 
+                  <%= link_to 'Editar', edit_customer_path(@customer)%></div>-->
 	<% @contact.each do |cont| %>
 	<div>Tipo de contacto:     <%= cont.type_contact %></div>
 	<div>Contacto:     <%= cont.contact_value %></div>

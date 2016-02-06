@@ -6,22 +6,21 @@ IMPORTANTE
  ejecutar rake db:seed
  ejecutar bundle exec rails s
  si te aparece error "Could not find a JavaScript runtime"
- (yo en mi pc lo solucione ejecutando nodejs no pude instalar 
- la gema therubyracer me tiraba error.)
+ (yo en mi pc lo solucione instalando la libreria de js no pude instalar 
+ la gema therubyracer me tiraba error)
  podes descomentar la linea 16 del Gemfile.
  ejecutar de nuevo  ejecutar bundle exec rails s
  
  
 comando para poblar la bd a traves de seeds. 
-bundle exec rails c 
 rake db:seed
 
 este comando es para ejecutar los tests:
-ponemos:
-bundle exec rails c 
-y luego 
 bundle exec rake test test/models/customer_test.rb
 
 ejecutar server
 bundle exec rails s
+
+ejecutar consola
+bundle exec rails c
 

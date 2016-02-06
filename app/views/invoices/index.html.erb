@@ -10,6 +10,7 @@
 			<td><%= ins.amount %></td>
 			<td><%= ins.date %></td>
 			<td><%= ins.reveiver %></td>
+			<td><%= ins.cuil_cuit_reveiver %></td>
 			<td class="custom-cell">
 			<div><%= link_to 'Editar', edit_customer_invoice_path(@customer,ins) %></div>
 			<div><%= link_to 'Eliminar', customer_invoice_path(@customer,ins),method: :delete %></div>

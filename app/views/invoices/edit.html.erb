@@ -16,6 +16,13 @@
    <%= ins.label "Monto" %><br>
    <%= ins.number_field :amount, :step => 0.01,:required => true,:class => 'imputs' %>
    </div>
+   <div class ="field">
+  <%= ins.label "CUIT/CUIL" ,:class => "label-imputs"%><br>
+  <%=  ins.text_field :cuil_cuit_reveiver,:required => true,:class => 'imputs',
+  pattern:/[\d{2}]+\-[\d{8}]+\-[\d{1}]/,
+  :placeholder => "formato NN-NNNNNNNN-N"
+  %>
+  </div>
    <div class="actions">
      <%= ins.submit 'Guardar',:class => 'submit-class'%> <%= link_to 'Volver', customer_invoices_path,:class => 'volver-class' %>
   </div>
