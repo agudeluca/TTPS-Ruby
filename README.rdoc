@@ -13,7 +13,7 @@ IMPORTANTE
  
  
 comando para poblar la bd a traves de seeds. 
-rake db:seed
+bundle exec rake db:seed
 
 este comando es para ejecutar los tests:
 bundle exec rake test test/models/customer_test.rb
