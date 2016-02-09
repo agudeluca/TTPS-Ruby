@@ -30,7 +30,7 @@ class CustomersController < ApplicationController
 
 	def update
 		@customer=Customer.find(params[:id])
-		if  @customer.update_values(customer_params,params[:cont],params[:new_contact])
+		if  @customer.update_values(customer_params_to_update,params[:new_contact])
 			redirect_to customers_url
 			else
 			redirect_to edit_customer_path(@customer)
@@ -70,6 +70,10 @@ class CustomersController < ApplicationController
 	def contact_params
 	    params.require(:contacts).permit(:type_contact, :contact_value)
 	end
+    def customer_params_to_update
+		   customer_params.merge!({contacts_attributes: params[:cont].map{|key, value| 
+			  {id:key,type_contact:value['type_contact'],contact_value:value['contact_value']}} }).permit(:name,:last_name,:birthdate,:genre,:document_number,:cuil_cuit,contacts_attributes:[ :id,:type_contact, :contact_value ])
 
+	end
 	
 end

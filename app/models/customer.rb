@@ -29,6 +29,9 @@ class Customer < ActiveRecord::Base
 	has_many :invoices,dependent: :destroy
 	accepts_nested_attributes_for :contacts
 
+=begin
+
+
 
 def update_contacts(datatoupdate)
     guardo=false
@@ -38,7 +41,7 @@ def update_contacts(datatoupdate)
   end
   return guardo
 end
-=begin
+
 	def update_contacts(datatoupdate)
 	      datatoupdate_enum=datatoupdate.to_enum
           contacts_enum=contacts.all.to_enum
@@ -54,24 +57,31 @@ end
         end
         return inserto
     end
-=end
+
 
         
  	def update_values(customer,contacts,new_contact)
         @new=Contact.new(type_contact: new_contact["type_contact"],contact_value:new_contact["contact_value"])
     	if !@new.valid?
     	(update_attributes(customer) &&  
-        update_contacts(contacts))
+        Contact.update(contacts.keys,contacts.values))
     	 
     	else
     	(update_attributes(customer) && 
-        update_contacts(contacts) && 
+        Contact.update(contacts.keys,contacts.values) && 
         self.contacts.new(type_contact: new_contact["type_contact"],contact_value:new_contact["contact_value"]).save)
         
         end
 	    end
+=end
 
-
+def update_values(customer_contacts,new_contact)
+    @new=Contact.new(type_contact: new_contact["type_contact"],contact_value:new_contact["contact_value"])
+    if @new.valid?
+      self.contacts.new(type_contact: new_contact["type_contact"],contact_value:new_contact["contact_value"]).save
+    end
+    self.update(customer_contacts)
+end
 
 	def calcular_edad
   		now = Time.now.utc.to_date
