@@ -72,7 +72,10 @@ class CustomersController < ApplicationController
 	end
     def customer_params_to_update
 		   customer_params.merge!({contacts_attributes: params[:cont].map{|key, value| 
-			  {id:key,type_contact:value['type_contact'],contact_value:value['contact_value']}} }).permit(:name,:last_name,:birthdate,:genre,:document_number,:cuil_cuit,contacts_attributes:[ :id,:type_contact, :contact_value ])
+			  {id:key,type_contact:value['type_contact'],
+			  	contact_value:value['contact_value']}} }).permit(:name,:last_name,:birthdate,
+			  	                                                 :genre,:document_number,:cuil_cuit,
+			  	                                                 contacts_attributes:[ :id,:type_contact, :contact_value ])
 
 	end
 	
