@@ -71,6 +71,7 @@ body {
   padding-bottom: 8px;
   border-radius: 4px;
   border-color: #3D3E3E;
+  color: black;
   border-style: solid;
   top: 50px;
   border-width: 2px;
@@ -90,11 +91,15 @@ body {
   padding-bottom: 8px;
   border-radius: 4px;
   border-color: #3D3E3E;
+  color: black;
   border-style: solid;
   top: 50px;
   border-width: 2px;
   left: 45%;
   box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.75);
+}
+body a{
+  text-decoration: none;
 }
 .volver-class5{
   position: relative;
@@ -106,12 +111,14 @@ body {
   border-radius: 4px;
   border-color: #3D3E3E;
   border-style: solid;
+  color: black;
   top: -42px;
   border-width: 2px;
   left: 78%;
   box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.75);
 }
 .volver-class{
+  
   position: relative;
   background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
   padding-left: 40px;
@@ -120,6 +127,7 @@ body {
   padding-bottom: 8px;
   border-radius: 4px;
   border-color: #3D3E3E;
+  color: black;
   border-style: solid;
   border-width: 2px;
   box-shadow: -1px 0px 13px 3px rgba(0,0,0,0.75);
@@ -164,6 +172,13 @@ th, td {
     border-color: red;
     background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
 }
+.colorgeneric{
+  color: black;
+}
+.red{
+  color: red;
+}
+
 
 .insertarbutton{
             background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
@@ -174,6 +189,7 @@ th, td {
             border-style: solid;
             border-width: 1px;
             border-radius: 5px;
+            color: black;
             border-color: #940505;
             font-family: 'Ubuntu', sans-serif;
             font-size: xx-large;
