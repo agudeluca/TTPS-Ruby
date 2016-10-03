@@ -182,21 +182,16 @@ th, td {
 
 .insertarbutton{
             background: linear-gradient(to bottom, #cfcfcf 0%, #525252 100%);
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-bottom: 5px;
-            padding-top: 5px;
-            border-style: solid;
-            border-width: 1px;
-            border-radius: 5px;
-            color: black;
-            border-color: #940505;
-            font-family: 'Ubuntu', sans-serif;
-            font-size: xx-large;
-            position: relative;
-            margin: 87px;
-            top: -35px;
-            left: 46%;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    color: black;
+    border-color: #940505;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: xx-large;
+    position: relative;
+    left: 15;
+    margin-left: 10%;
 }
 
 /* line 14, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
@@ -211,15 +206,15 @@ th, td {
 
 /* line 22, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
 .main-container {
-  position: inherit;
-  width: 80%;
-  min-height: 640px;
-  margin-top: 81px;
-  margin-left: 10%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.75);
-  background: rgba(255, 255, 255, 0.31);
-  margin-bottom: 17px;
+    position: relative;
+    width: 80%;
+    height: 100%;
+    margin-top: 81px;
+    margin-left: 10%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 4px rgba(0, 0, 0, 0.75);
+    background: rgba(255, 255, 255, 0.31);
+    margin-bottom: 15%;
 }
 
 /* line 33, /home/xagusss/TTPS-Ruby/app/assets/stylesheets/application.css.scss */
